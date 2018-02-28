@@ -31,3 +31,7 @@ class Plan(models.Model):
 class Food(models.Model):
     plan = models.ForeignKey('Plan', on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
+
+class Progress(models.Model):
+    link = models.URLField(max_length=200, unique=True)
+    description = models.CharField(max_length=250, blank=True)

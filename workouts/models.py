@@ -20,9 +20,9 @@ class Plan(models.Model):
     user_ending_weight = models.IntegerField(blank=True)
     goals = models.CharField(max_length=100, blank=True)
     calories = models.IntegerField(blank=True)
-    macro_protein = models.IntegerField(blank=True)
-    macro_carb = models.IntegerField(blank=True)
-    macro_fat = models.IntegerField(blank=True)
+    macro_protein = models.IntegerField(blank=True, null=True)
+    macro_carb = models.IntegerField(blank=True, null=True)
+    macro_fat = models.IntegerField(blank=True, null=True)
     period = models.FloatField(blank=True)
     tldr = models.TextField(max_length=1000)
     def __str__(self):

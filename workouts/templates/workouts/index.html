@@ -57,11 +57,13 @@
                 <div class="media">
                     <!-- <img class="mr-3" src="..." alt="Generic placeholder image"> -->
                     <div class="media-body">
-                        <h5 class="mt-0">{{result}} - {{result.user_sex}}/{{result.user_age}}/{{result.user_height}} cm</h5>
-                        <strong>TL;DR</strong>
-                        {{result.tldr|safe}}
-                        <br>
+                        <h5 class="mt-0">{{result}} - {{result.user_sex}}/{{result.user_age}}/{{result.user_height}} cm <br>
+                        <small class="text-muted">{{result.period}} months</small></h5>
                         <a href="{{result.reddit_link}}">Link to Reddit Post</a>
+                        <br>
+                        {% with tldr=result.tldr|safe %}
+                        {{tldr|truncatechars_html:"200"}}
+                        {% endwith %}
                     </div>
                 </div>
             </div>

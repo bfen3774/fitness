@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '_wge)a)a0o&@oq8qeq!5dk0a(n4-pb)7+rb*hxi+j)4d$#_s!q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'fitness.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bfen3774$fitnessdb',
+        'USER': 'bfen3774',
+        'PASSWORD': 'FoobarFDThane1!',
+        'HOST': 'bfen3774.mysql.pythonanywhere-services.com',
     }
 }
 
@@ -118,4 +121,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/admin'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+
+
+
+
+
+
+
